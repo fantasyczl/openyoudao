@@ -42,30 +42,31 @@ proxyDict = {}
 #}
 
 keywordtext = ""
-baseurl=""
-lock=0
-userdir=os.path.expanduser('~')
+baseurl = ""
+lock = 0
+userdir = os.path.expanduser('~')
+currentDir = os.path.abspath(os.path.curdir)
 cachedir = userdir + "/.openyoudao"
 subcachedir = userdir + "/.openyoudao/cache"
-cachedirhistory = userdir + "/.openyoudao/cache/history.cache"
-cachedirorigin = userdir + "/.openyoudao/cache/origin.html"
-cachedirresult = userdir + "/.openyoudao/cache/result.html"
-datadir=userdir + "/.local/share/webkit/databases/file__0.localstorage"
-sqlitedir=userdir + "/.local/share/webkit"
+cachedirhistory = currentDir + "/cache/history.cache"#userdir + "/.openyoudao/cache/history.cache"
+cachedirorigin = currentDir + "/cache/origin.html"#userdir + "/.openyoudao/cache/origin.html"
+cachedirresult = currentDir + "/cache/result.html"#userdir + "/.openyoudao/cache/result.html"
+datadir = currentDir + "/cache/databases/file__0.localstorage"#userdir +"/.local/share/webkit/databases/file__0.localstorage"
+sqlitedir = userdir + "/.local/share/webkit"
 prebaseurl=""
-url=""
+url = ""
 workdir = os.getcwd()
 homedir = sys.path[0]
-youdaosqlitedir = "/var/cache/openyoudao/databases"
-historydir = cachedir + "/cache/history.cache"
-origindir = cachedir + "/cache/origin.html"
-resultdir = cachedir + "/cache/result.html"
-headyoudao = "/var/cache/openyoudao/construction/youdao/head.html"
-headicb = "/var/cache/openyoudao/construction/icb/head.html"
-bodystartyoudao = "/var/cache/openyoudao/construction/youdao/body-start.txt"
-bodystarticb = "/var/cache/openyoudao/construction/icb/body-start.txt"
-bodyendicb = "/var/cache/openyoudao/construction/icb/body-end.txt"
-homeurl = "file://" + "/var/cache/openyoudao/config.html"
-baseurlyoudao="http://dict.youdao.com/search?q="
+youdaosqlitedir = currentDir + "/cache/databases"
+historydir = currentDir + "/cache/history.cache"
+origindir = currentDir + "/cache/origin.html"
+resultdir = currentDir + "/cache/result.html"
+headyoudao = currentDir + "/cache/construction/youdao/head.html"
+headicb = currentDir + "/cache/openyoudao/construction/icb/head.html"
+bodystartyoudao = currentDir + "/cache/construction/youdao/body-start.txt"
+bodystarticb = currentDir + "/cache/openyoudao/construction/icb/body-start.txt"
+bodyendicb = currentDir + "/cache/openyoudao/construction/icb/body-end.txt"
+homeurl = "file://" + currentDir + "/cache/config.html"
+baseurlyoudao = "http://dict.youdao.com/search?q="
 baseurlicb="http://www.iciba.com/"
 downloadwait = "<html><body><b style=\"font-size:80px;position:absolute;top:42%;left:35%;\" >Wai    ting...</b></body></html>"
